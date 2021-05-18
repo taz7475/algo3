@@ -1,0 +1,33 @@
+FUNCTION dot_product( tab1: ARRAY_OF INTEGER [],tab2: ARRAY_OF INTEGER []) : INTEGER
+VAR
+  prod: INTEGER:=0
+  i:INTEGER
+BEGIN
+    FOR i FROM 0 TO tab1.length  DO
+        prod:=prod + tab1[i]*tab2[i]
+    END_FOR
+
+     RETURN prod 
+
+END 
+
+ALGORITHM dot_product
+VAR
+  i,n:INTEGER
+  is_orth:INTEGER:=0
+  vector1,vector2 : ARRAY_OF INTEGER[n];
+BEGIN
+    READ(n)
+    FOR i FROM 0 TO 7  DO
+    write('ENTER vector1 and vector2')
+       READ(vector1)
+       READ(vector2)
+
+       is_orth=dot(vector1,vector2)
+       IF (is_orth=0) THEN
+          WRITE('vector1 and vector2 are orth')
+         ELSE
+         WRITE ('vector1 and vector2 are not orth')   
+       END_IF
+    END_FOR
+END 
